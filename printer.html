@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechFix Hub - Printer Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    header, .hero, .intro-text, .brands, .services, footer {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #4CAF50;
+      animation: slideInLeft 1s ease;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    /* Hero Section */
+    .hero img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* Intro Text */
+    .intro-text {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      color: #0078d4;
+      font-weight: 600;
+      animation: slideInRight 1s ease;
+    }
+
+    /* Brand Logos */
+    .brands {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .brands img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.4s;
+    }
+
+    .brands img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #d6ebff;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .services-left {
+      animation: slideInLeft 1s ease;
+    }
+
+    .services-left img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .services-right {
+      max-width: 500px;
+      animation: slideInRight 1s ease;
+    }
+
+    .services-right h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #4CAF50;
+    }
+
+    .services-right ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services-right li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #2e7d32;
+    }
+
+    .services-right i {
+      color: #2e7d32;
+      margin-right: 0.5rem;
+    }
+
+    .book-btn {
+      background-color: #2e7d32;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .book-btn:hover {
+      background-color: #1b5e20;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      background: #f0f0f0;
+      padding: 20px 40px;
+      font-size: 14px;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease;
+    }
+
+    footer .footer-info {
+      flex: 1;
+    }
+
+    footer .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    footer .social-icons img {
+      width: 24px;
+      margin-left: 10px;
+      vertical-align: middle;
+      transition: transform 0.3s;
+    }
+
+    footer .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    footer .copyright {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .services {
+        flex-direction: column;
+      }
+
+      .services-right {
+        text-align: center;
+      }
+
+      .brands {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .brands img {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">TechFix Hub</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="aboutus.html">About us</a>
+    </nav>
+  </header>
+<section class="hero">
+  <img src="images/printer banner.png" alt="Printers Banner" />
+</section>
+
+<section class="intro-text">
+  <p>Bringing Your Devices Back to Life — TechFix Hub Has You Covered.</p>
+</section>
+
+<section class="brands">
+  <img src="images/949ae3a458940c03e907858a88e40af2.png" alt="PC Laptop" />
+  <img src="images/printer-hd-png-printer-png-image-1000.png" alt="HP Printer" />
+  <img src="images/printer_PNG101580.png" alt="Windows Printer" />
+</section>
+
+<section class="services">
+  <div class="services-left">
+    <img src="images/INFORMATICA (IMPRESORAS) (63).png" alt="Printer repair image" />
+  </div>
+  <div class="services-right">
+    <h3>Printer Services</h3>
+    <ul>
+      <li><i class="fa fa-check-circle"></i> Set up printers, drivers, and network connections.</li>
+      <li><i class="fa fa-check-circle"></i> Solve paper jams, error messages, and printing issues.</li>
+      <li><i class="fa fa-check-circle"></i> Replace cartridges and ensure proper ink flow.</li>
+    </ul>
+    <a href="printerservice.html" class="book-btn">Book a Service</a>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-info">
+      <p>Address: Zone 6, Dalig, Manolo Fortich, Bukidnon</p>
+      <p>Contact Number: 0935 230 8569</p>
+      <p>Email: TechFixHub@gmail.com</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/login.php/?_rdc=1&_rdr" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/login" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+      </a>
+    </div>
+    <div class="copyright">
+      <p>© 2025 TechFix Hub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

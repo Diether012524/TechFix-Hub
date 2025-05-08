@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="TechFix Hub offers affordable and professional printer services. Book your appointment today!" />
+  <title>Printer Service - TechFix Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #4CAF50;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #338DFF;
+    }
+
+    section.hero {
+      background: #338DFF;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    section.hero h1 {
+      font-size: 36px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeSlideUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #338DFF;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    form input,
+    form select,
+    form button {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    form input:focus,
+    form select:focus {
+      border-color: #338DFF;
+      box-shadow: 0 0 8px rgba(51, 153, 255, 0.3);
+      outline: none;
+    }
+
+    form select {
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    form button {
+      background-color: #338DFF;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    form button:hover {
+      background-color: #007acc;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+
+  /* Footer */
+  footer {
+      background: #f0f0f0;
+      padding: 20px 40px;
+      font-size: 14px;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease;
+    }
+
+    footer .footer-info {
+      flex: 1;
+    }
+
+    footer .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    footer .social-icons img {
+      width: 24px;
+      margin-left: 10px;
+      vertical-align: middle;
+      transition: transform 0.3s;
+    }
+
+    footer .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    footer .copyright {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("✅ Your printer service request has been submitted! We will contact you soon.");
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">TechFix Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="aboutus.html">About us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Book Your Printer Service</h1>
+    <p>Fast, reliable, and affordable printer services at TechFix Hub.</p>
+  </section>
+
+  <div class="form-container">
+    <h2>Printer Service</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" name="full_name" placeholder="Full Name" required />
+      <input type="tel" name="contact_number" placeholder="Contact Number" required />
+      <input type="text" name="printer_model" placeholder="Printer Model" required />
+      <input type="datetime-local" name="preferred_datetime" required />
+      <select name="service_type" required>
+        <option value="" disabled selected>Select Service Type (With Price)</option>
+        <option value="cleaning">Cleaning - ₱300</option>
+        <option value="ink-refill">Ink Refill - ₱200</option>
+        <option value="scanner-repair">Scanner Repair - ₱400</option>
+        <option value="driver-installation">Driver Installation - ₱150</option>
+        <option value="paper-jam-fix">Paper Jam Fix - ₱250</option>
+        <option value="network-setup">Network Setup - ₱500</option>
+        <option value="general-repair">General Repair - ₱600</option>
+        <option value="maintenance-check">Maintenance Check - ₱350</option>
+        <option value="board-repair">Board Repair - ₱700</option>
+      </select>
+      <button type="submit">Submit Request 🚀</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-info">
+      <p>Address: Zone 6, Dalig, Manolo Fortich, Bukidnon</p>
+      <p>Contact Number: 0935 230 8569</p>
+      <p>Email: TechFixHub@gmail.com</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/login.php/?_rdc=1&_rdr" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/login" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+      </a>
+    </div>
+    <div class="copyright">
+      <p>© 2025 TechFix Hub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
